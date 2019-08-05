@@ -1,2 +1,10 @@
 server:
   port: 80
+  
+#git remote add github git@github.com:zouyaowen/mark.git
+#git fetch github master
+#git merge github/master————>fatal: refusing to merge unrelated histories
+#git merge -h
+#git merge --allow-unrelated-histories github/master
+#
+#
