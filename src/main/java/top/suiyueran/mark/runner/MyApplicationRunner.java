@@ -15,9 +15,6 @@ public class MyApplicationRunner implements ApplicationRunner {
 	@Async
 	public void run(ApplicationArguments args) throws Exception {
 		log.info("--------MyApplicationRunner run--------");
-		/*while (true) {
-			log.info("--------------MyApplicationRunner run--------------");
-			TimeUnit.SECONDS.sleep(5);
-		}*/
+		
 	}
 }

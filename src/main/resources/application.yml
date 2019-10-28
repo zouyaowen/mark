@@ -1,6 +1,6 @@
 server:
   port: 81
-  
+spring:
 #git remote add github git@github.com:zouyaowen/mark.git
 #git fetch github master
 #git merge github/master————>fatal: refusing to merge unrelated histories
@@ -8,3 +8,10 @@ server:
 #git merge --allow-unrelated-histories github/master
 #
 #
+  redis:
+    host: 192.168.0.10
+    port: 8679
+    password: 123456
+    database: 0
+wordsfile:
+  path: words.txt

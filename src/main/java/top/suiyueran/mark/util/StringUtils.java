@@ -7,6 +7,7 @@ public class StringUtils {
 	 * @param ch 需要判断的字符
 	 * @return 中文返回true，非中文返回false
 	 */
+	@SuppressWarnings("unused")
 	private static boolean isChinese(char ch) {
 		// 获取此字符的UniCodeBlock
 		Character.UnicodeBlock ub = Character.UnicodeBlock.of(ch);
