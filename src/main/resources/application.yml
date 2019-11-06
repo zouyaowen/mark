@@ -1,6 +1,8 @@
 server:
   port: 81
 spring:
+  cache:
+    type: redis
 #git remote add github git@github.com:zouyaowen/mark.git
 #git fetch github master
 #git merge github/master————>fatal: refusing to merge unrelated histories
@@ -9,9 +11,9 @@ spring:
 #
 #
   redis:
-    host: 192.168.0.10
+    host: 120.27.2.221
     port: 8679
-    password: 123456
+    password: zouyaowen@123
     database: 0
 wordsfile:
   path: words.txt

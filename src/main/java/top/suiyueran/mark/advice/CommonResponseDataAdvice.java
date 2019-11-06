@@ -37,14 +37,14 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 	public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> selectedConverterType, ServerHttpRequest request,
 			ServerHttpResponse response) {
 
-		CommonResponse<Object> commonResponse = new CommonResponse<>(200, "success");
+		CommonResponse<Object> res = new CommonResponse<>(200, "success");
 		if (null == body) {
-			return commonResponse;
+			return res;
 		} else if (body instanceof CommonResponse) {
-			commonResponse = (CommonResponse<Object>) body;
+			res = (CommonResponse<Object>) body;
 		} else {
-			commonResponse.success(body);
+			res.setData(body);
 		}
-		return commonResponse;
+		return res;
 	}
 }
