@@ -59,5 +59,9 @@ public class ValidatorUtil implements InitializingBean {
 			return String.join(",", errMsgMap.values());
 		}
 	}
+	
+	public static class Add {
+		
+	}
 
 }
