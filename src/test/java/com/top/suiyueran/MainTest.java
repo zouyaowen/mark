@@ -1,6 +1,8 @@
-package top.suiyueran.test;
+package com.top.suiyueran;
 
 import java.time.LocalDateTime;
+
+import org.junit.Test;
 
 import top.suiyueran.mark.entity.UserDO;
 import top.suiyueran.mark.response.CommonResponse;
@@ -17,5 +19,10 @@ public class MainTest {
 		userDO.setUpdateTime(LocalDateTime.now());
 		commonResponse.success(userDO);
 		System.out.println(commonResponse);
+	}
+
+	@Test
+	public void test() {
+
 	}
 }

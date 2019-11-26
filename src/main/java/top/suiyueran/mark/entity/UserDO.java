@@ -1,6 +1,7 @@
 package top.suiyueran.mark.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import lombok.Data;
@@ -17,4 +18,5 @@ public class UserDO implements Serializable{
 	private Integer gender;
 	private LocalDateTime createTime;
 	private LocalDateTime updateTime;
+	private BigDecimal studyCost;
 }
