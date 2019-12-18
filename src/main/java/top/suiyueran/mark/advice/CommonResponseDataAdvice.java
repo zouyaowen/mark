@@ -17,7 +17,7 @@ import top.suiyueran.mark.response.CommonResponse;
  * @Date: 20:48 2019/8/05
  * @Modifyed by:
  */
-@RestControllerAdvice
+@RestControllerAdvice("top.suiyueran.mark.controller")
 @SuppressWarnings("unchecked")
 public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
 
