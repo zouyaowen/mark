@@ -16,17 +16,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@ConditionalOnExpression("'${spring.profiles.active}'.equals('dev')")
-//@Profile("dev")
-public class SwaggerConf {
+//@Profile("prod")
+@ConditionalOnExpression("'${spring.profiles.active}'.equals('prod')")
+public class SwaggerProdConf {
 	@Bean
 	public Docket api() {
-		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo())
-				.select()
+		return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select()
 				// 生成api文档扫描路径
-				.apis(RequestHandlerSelectors.basePackage("top.suiyueran.mark.controller"))
-				.paths(PathSelectors.any())
-				.build().enable(true);
+				.apis(RequestHandlerSelectors.basePackage("top.suiyueran.mark.controller.open")).paths(PathSelectors.any()).build().enable(true);
 	}
 
 	private ApiInfo apiInfo() {
@@ -40,5 +37,4 @@ public class SwaggerConf {
 				// 描述
 				.description("Base Java 1.8").build();
 	}
-
 }
